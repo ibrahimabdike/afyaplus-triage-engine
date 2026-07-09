@@ -160,14 +160,3 @@ Mild Headache & Fever	2.75s	45.60s	No
 Severe Chest Pain	2.57s	39.21s	Yes
 Child with Rash & Fever	3.91s	55.88s	Yes
 
-Business Value
-For AfyaPlus Health
-Reduced Response Time: Cloud processing delivers results in ~3 seconds
-
-Reliability: Automatic failover ensures 100% uptime
-
-Cost Optimization: Local inference saves API costs when appropriate
-
-Offline Capability: Works in areas with poor network connectivity
-
-Structured Output: Ready for downstream EMR integration
