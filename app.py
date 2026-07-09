@@ -1,4 +1,4 @@
-# app.py - AfyaPlus Triage Engine (with fixed local timeout)
+# app.py - AfyaPlus Triage Engine 
 import os
 import json
 import time
