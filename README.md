@@ -68,7 +68,7 @@ ollama pull llama3.2
 # Verify installation
 ollama run llama3.2 "Hello"
 
-
+```
 
 Installation
 1. Clone the Repository
