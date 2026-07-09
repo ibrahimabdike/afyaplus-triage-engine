@@ -16,8 +16,27 @@ AfyaPlus Health is building a prototype medical sorting pipeline that processes 
 - **Security-First**: Guardrails against prompt injection and hallucination
 
 ## System Architecture
-- **Patient Message → Security Check → Cloud Inference (GPT-4o-mini)
-- **↓ (if timeout/error)
-- **Local Fallback (Ollama)
-- **↓
-- **JSON Output → Routing Decision
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> Received: Patient Message
+    Received --> SecurityCheck
+    SecurityCheck --> CloudInference: Valid
+    SecurityCheck --> SecurityBlocked: Invalid
+    
+    CloudInference --> ParseSuccess: Success (3s avg)
+    CloudInference --> LocalFallback: Timeout/Error
+    
+    LocalFallback --> ParseSuccess: Success (47s avg)
+    LocalFallback --> EmergencyDefault: Failure
+    
+    ParseSuccess --> RoutingDecision
+    EmergencyDefault --> RoutingDecision
+    
+    RoutingDecision --> EmergencyRoom: is_critical = true
+    RoutingDecision --> ClinicAppointment: is_critical = false
+    RoutingDecision --> HomeCare: is_critical = false
+    
+    EmergencyRoom --> [*]
+    ClinicAppointment --> [*]
+    HomeCare --> [*]
+    SecurityBlocked --> [*]
