@@ -70,3 +70,35 @@ ollama run llama3.2 "Hello"
 
 ```
 
+Installation
+1. Clone the Repository
+bash
+git clone https://github.com/ibrahimabdike/afyaplus-triage-engine.git
+cd afyaplus-triage-engine
+
+2. Install Dependencies
+bash
+pip install -r requirements.txt
+3. Configure Environment Variables
+Create a .env file in the project root:
+
+bash
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+4. Verify Local Model
+bash
+ollama list
+# Should show llama3.2:latest
+Usage
+Quick Start
+bash
+python app.py
+Process a Specific Message
+bash
+python app.py "I have severe chest pain and difficulty breathing"
+Run Benchmark
+The benchmark runs automatically after each execution, comparing cloud vs local performance:
+
+```bash
+python app.py
+
+```
