@@ -96,7 +96,10 @@ ACTION: IMMEDIATE EMERGENCY ROUTING
 | Severe Chest Pain | 2.57s | 39.21s | Yes |
 | Child with Rash & Fever | 3.91s | 55.88s | Yes |
 
-Key Findings: Cloud is 15.2x faster than local inference. Both models achieve 100% success rate. Cloud handles timeouts gracefully with automatic local fallback. Local processing is viable for offline/remote scenarios.
+- Key Findings: Cloud is 15.2x faster than local inference.
+- Both models achieve 100% success rate.
+- Cloud handles timeouts gracefully with automatic local fallback.
+- Local processing is viable for offline/remote scenarios.
 
 ## Business Value
 
