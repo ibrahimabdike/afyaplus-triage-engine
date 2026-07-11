@@ -44,8 +44,8 @@ Routing Decision
 ## Installation
 
 ```bash
-git clone https://github.com/afyaplus/triage-engine.git
-cd triage-engine
+git clone https://github.com/ibrahimabdike/afyaplus-triage-engine.git
+cd afyaplus-triage-engine
 pip install openai python-dotenv httpx requests
 curl -fsSL https://ollama.ai/install.sh | sh
 ollama serve
